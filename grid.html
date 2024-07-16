@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3, 200px) 50px 50px;
+        gap: 20px;
+        }
+        .box{
+            background-color: gray;
+        }
+        #box_1{
+            grid-row: span 5;
+        }
+        #box_11, #box_12{
+            grid-column: span 3;
+        }
+
+        #box_6, #box_7, #box_9, #box_10{
+            background-color: tomato;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.box#box_$*12{Box_$} -->
+    <div class="container">
+        <div class="box" id="box_1">Box_1</div>
+        <div class="box" id="box_2">Box_2</div>
+        <div class="box" id="box_3">Box_3</div>
+        <div class="box" id="box_4">Box_4</div>
+        <div class="box" id="box_5">Box_5</div>
+        <div class="box" id="box_6">Box_6</div>
+        <div class="box" id="box_7">Box_7</div>
+        <div class="box" id="box_8">Box_8</div>
+        <div class="box" id="box_9">Box_9</div>
+        <div class="box" id="box_10">Box_10</div>
+        <div class="box" id="box_11">Box_11</div>
+        <div class="box" id="box_12">Box_12</div>
+    </div>
+</body>
+</html>
